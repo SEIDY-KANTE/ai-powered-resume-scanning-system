@@ -1,111 +1,66 @@
-# steamlit_app.py
 import streamlit as st
-
-# --- Define Pages ---
-
-main_page = st.Page("app.py", title="Home ", icon="🧠")
-hr_page = st.Page("./pages/hr_page.py", title="Human Resources", icon="🧑‍💼")
-applicant_page = st.Page("./pages/applicant_page.py", title="Applicant", icon="👩🏻‍🎓")
-dashbooard_page = st.Page("./pages/dashboard.py", title="Dashboard", icon="📊")
+from ui.theme import apply_custom_theme
+from hide_sidebar.pages import hr_page, applicant_page, dashboard
+import app
+from config.constants import HOME, HR_PORTAL, APPLICANT_PORTAL, DASHBOARD, SYSTEM_THEME, LIGHT_THEME, DARK_THEME
 
 
-
-# --- Navigation ---
-selected_page = st.navigation([main_page, hr_page, applicant_page, dashbooard_page])
-
-
-
-# --- Run Selected Page ---
-selected_page.run()
-
-
-# --- Sidebar Branding & Theme Toggle ---
-# st.sidebar.markdown("## 🌐 Navigation")
-
-
-
-# Theme icon toggle
-theme_icon = st.sidebar.radio(
-    "Theme",
-    options=["☀️", "🌙"],
-    index=0,
-    horizontal=True,
-    label_visibility="collapsed"
+# config
+st.set_page_config(
+    page_title="AI-powered Resume Scanning System",
+    page_icon="🧠",
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-# Map icons to themes
-theme_mode = "Light" if theme_icon == "☀️" else "Dark"
+# === Sidebar Theme Toggle === (add dark, light and your system theme here)
+# st.sidebar.markdown("Theme")
+theme = st.sidebar.selectbox("🌓 Theme ", options=[ SYSTEM_THEME, LIGHT_THEME, DARK_THEME], index=0)
 
-# --- Apply Custom Theme ---
-def apply_custom_theme(theme):
-    if theme == "Dark":
-        st.markdown(
-            """
-            <style>
-            html, body, [class*="st-"] {
-                background-color: #1e1e1e !important;
-                color: #ffffff !important;
-            }
-            .stApp {
-                background-color: #1e1e1e !important;
-            }
-            .css-18e3th9 {
-                background-color: #1e1e1e !important;
-            }
-            .css-1cpxqw2, .css-ffhzg2, .css-1d391kg, .css-hxt7ib {
-                background-color: #2e2e2e !important;
-                color: #ffffff !important;
-            }
-            .stTextInput input, .stTextArea textarea, .stSelectbox div, .stDateInput input {
-                background-color: #333 !important;
-                color: white !important;
-            }
-            .stButton button {
-                background-color: #444 !important;
-                color: white !important;
-                border: none;
-            }
-            .stRadio div {
-                background-color: transparent !important;
-            }
-            .stMarkdown, .stDataFrame, .stText, .stInfo {
-                color: white !important;
-            }
-            .css-1v3fvcr {
-                background-color: #2c2c2c !important;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            """
-            <style>
-            html, body, [class*="st-"] {
-                background-color: white !important;
-                color: black !important;
-            }
-            .stApp {
-                background-color: white !important;
-            }
-            .stTextInput input, .stTextArea textarea, .stSelectbox div, .stDateInput input {
-                background-color: white !important;
-                color: black !important;
-            }
-            .stButton button {
-                background-color: #f0f2f6 !important;
-                color: black !important;
-                border: 1px solid #ccc;
-            }
-            .stMarkdown, .stDataFrame, .stText, .stInfo {
-                color: black !important;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+# if system dont apply theme
+if theme == LIGHT_THEME:
+    apply_custom_theme("Light")
+elif theme == DARK_THEME:
+    apply_custom_theme("Dark")
+else:
+    # System theme is handled by Streamlit automatically, so we don't need to apply a custom theme.
+    pass
+
+# apply_custom_theme(theme_mode)
 
 
 
-apply_custom_theme(theme_mode)
+
+# theme_icon = st.sidebar.radio("Theme", ["☀️", "🌙"], index=0, horizontal=True, label_visibility="collapsed")
+# theme_mode = "Light" if theme_icon == "☀️" else "Dark"
+# apply_custom_theme(theme_mode)
+
+# === Navigation ===
+# PAGES = {
+#     "🏠 Home": app,
+#     "🧑‍💼 HR Portal": hr_page,
+#     "👩🏻‍🎓 Applicant Portal": applicant_page,
+#     "📊 Dashboard": dashboard
+# }
+
+PAGES = {
+    HOME: app,
+    HR_PORTAL: hr_page,
+    APPLICANT_PORTAL: applicant_page,
+    DASHBOARD: dashboard
+}
+    
+# selected_page = st.sidebar.selectbox("Navigation", options=list(PAGES.keys()))
+# PAGES[selected_page].run()
+
+if "selected_page" not in st.session_state:
+    st.session_state.selected_page = HOME
+
+selected_page = st.sidebar.selectbox(
+    "Navigation", options=list(PAGES.keys()), index=list(PAGES.keys()).index(st.session_state.selected_page)
+)
+
+# This allows programmatic navigation too
+st.session_state.selected_page = selected_page
+PAGES[selected_page].run()
+
