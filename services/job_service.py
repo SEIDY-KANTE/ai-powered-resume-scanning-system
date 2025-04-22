@@ -59,6 +59,20 @@ def truncate_description(desc: str, limit: int = 200) -> str:
 COMMON_SKILLS = {
     "Python", "Java", "SQL", "Excel", "Communication", "Project Management", "Machine Learning",
     "Data Analysis", "Leadership", "Problem Solving", "AWS", "Docker", "Kubernetes", "C++", "TensorFlow"
+    "ReactJS", "JavaScript", "HTML", "HTM5", "CSS", "CSS3", "Agile", "Scrum", "Git", "Linux", "Data Visualization",
+    "Cybersecurity", "Cloud Computing", "DevOps", "Artificial Intelligence", "Natural Language Processing",
+    "NodeJS", "ExpressJS", "Django", "Flask", "RESTful APIs", "GraphQL", "NoSQL", "MongoDB", "PostgreSQL",
+    "MySQL", "Data Engineering", "Big Data", "Hadoop", "Spark", "ETL", "Business Analysis", "Digital Marketing",
+    "SEO", "Content Creation", "Social Media Marketing", "Email Marketing", "Salesforce", "CRM",
+    "Customer Service", "Negotiation", "Time Management", "Critical Thinking", "Adaptability", "Teamwork",
+    "Interpersonal Skills", "Public Speaking", "Presentation Skills", "Networking", "Research Skills",
+    "Financial Analysis", "Budgeting", "Accounting", "Risk Management", "Quality Assurance", "Testing",
+    "User Experience", "UI/UX Design", "Graphic Design", "Adobe Creative Suite", "Video Editing",
+    "English", "Spanish", "French", "German", "Mandarin", "Japanese", "Korean", "Russian",
+    "Turkish", "Arabic",
+    "GitHub", "JIRA", "Trello", "Slack", "Zoom", "Microsoft Teams", "Notion", "Tailwind CSS", "Tailwind","TypeScript",
+    "TailwindCSS", "Figma", "Sketch", "Adobe XD", "Canva", "Power BI", "Tableau", "Looker", "QlikView",
+    "PowerPoint", "Word", "Excel", "Google Analytics", "Google Ads", "Facebook Ads", "Instagram Ads",
 }
 def get_all_skills():
     df = load_jobs()

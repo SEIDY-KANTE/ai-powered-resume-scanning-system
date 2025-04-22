@@ -1,8 +1,8 @@
 import streamlit as st
 from ui.theme import apply_custom_theme
-from hide_sidebar.pages import hr_page, applicant_page, dashboard
+from hide_sidebar.pages import hr_page, applicant_page, dashboard,data_visualization_page
 import app
-from config.constants import HOME, HR_PORTAL, APPLICANT_PORTAL, DASHBOARD, SYSTEM_THEME, LIGHT_THEME, DARK_THEME
+from config.constants import HOME, HR_PORTAL, APPLICANT_PORTAL, DASHBOARD,DATA_VISUALIZATION ,SYSTEM_THEME, LIGHT_THEME, DARK_THEME
 
 
 # config
@@ -47,7 +47,8 @@ PAGES = {
     HOME: app,
     HR_PORTAL: hr_page,
     APPLICANT_PORTAL: applicant_page,
-    DASHBOARD: dashboard
+    DASHBOARD: dashboard,
+    DATA_VISUALIZATION: data_visualization_page
 }
     
 # selected_page = st.sidebar.selectbox("Navigation", options=list(PAGES.keys()))

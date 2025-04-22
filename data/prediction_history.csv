@@ -1,3 +1,25 @@
-timestamp,applicant_name,job_title,model_used,match_score,skill_match,experience_match,missing_skills
-2025-04-21 06:00:13,,,Gemini Pro,70,70,70,Docker
-2025-04-21 06:06:37,N/A,N/A,My Custom Model,53,50,60,"ui design, sql"
+timestamp,job_title,model_used,match_score,skill_match,experience_match,missing_skills
+2025-04-21 06:00:13,Mobile App Developer,Gemini Pro,70,70,70,Docker
+2025-04-21 06:06:37,Mobile App Developer,My Custom Model,53,50,60,"ui design, sql"
+2025-04-22 12:06:55,Mobile App Developer,My Custom Model,35,25,60,"ui design, sql, javascript"
+2025-04-22 17:46:47,Cybersecurity Analyst,Gemini Pro,70,70,70,"node.js, nosql"
+2025-04-22 17:48:40,Cybersecurity Analyst,My Custom Model,35,25,60,"sql, node.js, nosql"
+2025-04-22 17:54:37,Product Manager,Gemini Pro,70,70,70,"CI/CD, SQL, NoSQL"
+2025-04-22 17:55:55,Product Manager,Gemini Pro,10,0,20,"machine learning, ci/cd, security, sql, nosql"
+2025-04-22 18:02:58,Cloud Architect,Gemini Pro,0,0,0,"javascript, aws, data analysis, docker"
+2025-04-22 18:05:20,Cloud Architect,Gemini Pro,70,65,75,"aws, docker"
+2025-04-22 18:09:18,AI/ML Engineer,Gemini Pro,70,70,70,react
+2025-04-22 18:26:14,AI/ML Engineer,Gemini Pro,70,70,70,React
+2025-04-22 18:35:50,AI/ML Engineer,Gemini Pro,70,70,70,React
+2025-04-22 18:37:19,AI/ML Engineer,Gemini Pro,70,70,70,React
+2025-04-22 18:37:30,AI/ML Engineer,Gemini Pro,0,0,0,"react, aws, machine learning"
+2025-04-22 18:43:54,AI/ML Engineer,Gemini Pro,70,70,70,react
+2025-04-22 18:44:51,AI/ML Engineer,Gemini Pro,0,0,0,"react, aws, machine learning"
+2025-04-22 18:45:24,AI/ML Engineer,Gemini Pro,70,70,70,React
+2025-04-22 18:48:58,AI/ML Engineer,Gemini Pro,70,70,70,"React, ReactJS"
+2025-04-22 19:01:58,AI/ML Engineer,Gemini Pro,75,70,80,"React, NoSQL, Kubernetes"
+2025-04-22 19:13:05,AI/ML Engineer,Gemini Pro,0,0,0,"react, aws, machine learning"
+2025-04-22 19:14:01,AI/ML Engineer,Gemini Pro,75,100,70,
+2025-04-22 19:24:54,AI/ML Engineer,Gemini Pro,0,0,0,"react, aws, machine learning"
+2025-04-22 19:28:11,Systems Analyst,Gemini Pro,75,80,70,"aws, docker"
+2025-04-22 19:46:03,Systems Analyst,Gemini Pro,75,80,70,aws
