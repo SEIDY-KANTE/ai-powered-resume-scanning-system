@@ -1,9 +1,6 @@
-# services/matcher.py
-
 import random
 import json
 from models.gemini_model import analyze_resume_with_gemini
-# from models.custom_lstm_model import predict_match  # Optional: if you plan to use it
 
 def match_resume_to_job(resume_data, job_data, model="My Custom Model"):
     job_skills = set(map(str.strip, job_data.get("Skills Required", "").lower().split(",")))

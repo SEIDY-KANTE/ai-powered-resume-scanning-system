@@ -26,7 +26,9 @@ def run():
     with col2:
         st.metric("Avg Match Score", f"{df['match_score'].mean():.2f}%")
     with col3:
-        st.metric("Top Model", df["model_used"].mode()[0])
+        # st.metric("Top Model", df["model_used"].mode()[0])
+        top_model = df.groupby("model_used")["match_score"].mean().idxmax()
+        st.metric("Top Model", top_model)
 
     st.markdown("---")
 
