@@ -72,7 +72,7 @@ COMMON_SKILLS = {
     "Turkish", "Arabic",
     "GitHub", "JIRA", "Trello", "Slack", "Zoom", "Microsoft Teams", "Notion", "Tailwind CSS", "Tailwind","TypeScript",
     "TailwindCSS", "Figma", "Sketch", "Adobe XD", "Canva", "Power BI", "Tableau", "Looker", "QlikView",
-    "PowerPoint", "Word", "Excel", "Google Analytics", "Google Ads", "Facebook Ads", "Instagram Ads",
+    "PowerPoint", "Word", "Google Analytics", "Google Ads", "Facebook Ads", "Instagram Ads",
 }
 def get_all_skills():
     df = load_jobs()
