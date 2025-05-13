@@ -1,0 +1,15 @@
+html, body, [class*="st-"] {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+.stApp {
+    background-color: #1e1e1e !important;
+}
+input, textarea, select {
+    background-color: #2e2e2e !important;
+    color: white !important;
+}
+button {
+    background-color: #444 !important;
+    color: white !important;
+}
