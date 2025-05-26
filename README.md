@@ -185,7 +185,7 @@ Distributed under the MIT License. See the [LICENSE](https://github.com/SEIDY-KA
 
 - [🧑‍💻 SEIDY KANTE](https://github.com/SEIDY-KANTE)
 - [👩‍💻 ŞEYMA KARTAL](https://github.com/kartalicesym)
-- [🧑‍💻 HAMADOUNE BARY](https://github.com/Bary253)
+- [🧑‍💻 HAMADOUNE BARY](https://github.com/Bary2536)
 
 ---
 
